@@ -3,6 +3,8 @@ package bouncer;
 import zookeeper.Barkable;
 import zookeeper.Lion;
 import zookeeper.Tiger;
+import zookeeper.Crocodile;
+import zookeeper.Leopard;
 
 public class Bouncer {
 
@@ -25,10 +27,14 @@ public class Bouncer {
     public static void main(String[] args) {
         Tiger tiger = new Tiger();
         Lion lion = new Lion();
+        Crocodile crocodile = new Crocodile();
+        Leopard leopard = new Leopard();
 
         Bouncer bouncer= new Bouncer();
         bouncer.barkAnimal(tiger);
         bouncer.barkAnimal(lion);
+        bouncer.barkAnimal(crocodile);
+        bouncer.barkAnimal(leopard);
 
         // Tiger 클래스의 객체는 다음과 같이 여러가지 자료형으로 표현할 수 있다.
         // Predator 로 선언된 predator 객체와 Barkable 로 선언된 barkable 객체는 사용할 수 있는 메소드가 서로 다르다.  predator 객체는 getFood 메소드만 호출이 가능하다. barkable 객체는 bark 메소드만 호출이 가능하다.
